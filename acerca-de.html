@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Acerca de nosotros</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="utia_logo.png" alt="Logo de Utopia" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li> </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="foto1.png" >
+            </div>
+            <div class="swiper-slide">
+                <img src="foto2.png" >
+            </div>
+            <div class="swiper-slide">
+                <img src="foto3.png" >
+            </div>
+            </div>
+          
+          <div class="swiper-pagination"></div>
+        
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+        </div>
+    
+        <div class="descripcion-acerca">
+             <h2>Nuestra Misión</h2>
+             <p>
+                "realzar la belleza natural y aumentar la confianza de nuestros clientes, 
+                creando cejas perfectamente definidas y de aspecto hiperrealista mediante la técnica experta del microblading."
+             </p>
+             <h2>Nuestro Compromiso</h2>
+             <p>
+                "garantizar tu seguridad y satisfacción en cada paso. Utilizamos exclusivamente pigmentos de la más alta calidad, 
+                herramientas esterilizadas y seguimos rigurosos protocolos de higiene, asegurando resultados hermosos y un procedimiento seguro."
+             </p>
+             <a href="contacto.html" class="boton-animado">Contáctanos Hoy Mismo</a>
+        </div>
+    
+    </main>
+    <footer>
+        <p>Utopía </p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <script>
+          const swiper = new Swiper('.swiper', {
+
+            loop: true, 
+            autoplay: { 
+              delay: 3000, 
+              disableOnInteraction: false,
+            },
+            pagination: { 
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: { 
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+        </script>
+    </body>
+    </html>
+    </a>
+</body>
+</html>
