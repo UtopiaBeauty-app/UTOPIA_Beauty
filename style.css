@@ -660,7 +660,7 @@ nav ul li a:hover {
 
 .intro-cursos-texto h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6em; /* Título de la lista un poco más pequeño */
+  font-size: 1.6em; 
   color: var(--color-texto-cafe-oscuro);
   margin-top: 0;
   margin-bottom: 20px;
@@ -668,40 +668,37 @@ nav ul li a:hover {
 }
 
 .intro-cursos-texto ul {
-  list-style: none; /* Sin puntos */
+  list-style: none; 
   padding: 0;
-  margin-bottom: 30px; /* Espacio antes del botón */
+  margin-bottom: 30px; 
 }
 
 .intro-cursos-texto li {
   font-family: 'Lora', serif;
-  font-weight: 700; /* Texto en negrita */
+  font-weight: 700; 
   font-size: 1.3em;
   color: var(--color-texto-cafe-oscuro);
   margin-bottom: 12px;
-  text-align: center; /* Centra los nombres de los cursos */
+  text-align: center; 
 }
 
 .intro-cursos-texto .subtexto {
-  font-weight: 400; /* Texto normal */
-  font-size: 0.8em; /* Más pequeño */
-  color: #666; /* Un gris */
-  display: block; /* En línea separada */
+  font-weight: 400; 
+  font-size: 0.8em; 
+  color: #666; 
+  display: block; 
   margin-top: 2px;
 }
 
 @media (max-width: 768px) {
 
-  /* ... (otros estilos responsivos para h1, h2, body, main, etc. se mantienen) ... */
-
-  /* --- Página Cursos: Intro --- */
   .intro-cursos {
-    /* Mantenemos flex, PERO quitamos flex-direction: column */
+
     display: flex;
-    flex-wrap: nowrap; /* Evita que envuelva si se aprieta mucho */
-    gap: 15px;         /* Espacio reducido entre columnas */
+    flex-wrap: nowrap; 
+    gap: 15px;        
     padding: 15px;
-    align-items: flex-start; /* Alinea al inicio */
+    align-items: flex-start;
   }
 
   .intro-cursos-imagenes {
@@ -709,8 +706,8 @@ nav ul li a:hover {
       flex: 0 0 130px; 
       display: flex;
       flex-direction: column;
-      gap: 8px; /* Menos espacio entre imágenes */
-      min-width: auto; /* Quitamos min-width previo */
+      gap: 8px; 
+      min-width: auto; 
   }
 
   .intro-cursos-imagenes img {
@@ -741,58 +738,51 @@ nav ul li a:hover {
 
 }
 
+/* Estilos para Móviles Pequeños (Hasta 480px) */
 @media (max-width: 480px) {
-  h1 { font-size: 1.8em; }
-  h2 { font-size: 1.5em; }
-  .hero h1 { font-size: 2em; }
-  .hero p { font-size: 1em; }
-  body { font-size: 14px; }
-  .servicio-categoria p { font-size: 1.1em; }
-  .descripcion-imagen { font-size: 1em; }
-  .servicio-detalle p, .servicio-detalle li { font-size: 0.95em; }
-  .contacto-info p, .redes-sociales li a { font-size: 0.95em; } 
-  .beneficios-texto li { font-size: 1em; } 
-  .beneficios-texto .lema { font-size: 1.1em; }
-  main { padding: 10px; }
-  .hero { margin: -10px -10px 20px -10px; min-height: 250px; } 
-  .logo { max-width: 100px; } 
-  nav ul { flex-direction: column; gap: 5px; } 
-  nav ul li a { padding: 8px 15px; text-align: center; }
-  
-  .imagen-item {
-    flex-basis: calc(100% - 10px); 
+
+  /* ... (otros estilos responsivos para h1, h2, body, main, logo, nav, galerías, etc. se mantienen como en la respuesta anterior) ... */
+
+   /* --- Página Cursos: Intro --- */
+   .intro-cursos {
+    flex-direction: column; /* Apilamos las columnas principales */
+    gap: 20px; /* Espacio entre bloque de imágenes y bloque de texto */
+    padding: 15px; /* Padding ajustado */
    }
 
-  
-  .contacto-visual img { height: 250px; } 
-  .testimonio img { height: 150px; } 
+   /* Hacemos que las imágenes se muestren en fila y envuelvan */
+   .intro-cursos-imagenes {
+      display: flex;        /* Usar flex */
+      flex-wrap: wrap;      /* Permitir que envuelvan a la siguiente línea */
+      justify-content: center; /* Centrar las imágenes */
+      gap: 10px;            /* Espacio entre imágenes */
+      margin-bottom: 20px; /* Espacio debajo del bloque de imágenes */
+   }
 
-  
-   .beneficios-imagenes { grid-template-columns: repeat(2, 1fr); } 
-   .beneficios-imagenes img { max-height: 120px; } 
+   /* Damos un tamaño fijo a cada imagen en la fila */
+   .intro-cursos-imagenes img {
+      width: 100px; /* Ancho fijo (puedes ajustar) */
+      height: 100px; /* Alto fijo (para hacerlas cuadradas) */
+      object-fit: cover; /* Recortar para llenar el cuadrado */
+      border-radius: 6px; /* Redondeo */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      flex-grow: 0; /* Evita que crezcan */
+      flex-shrink: 0; /* Evita que encojan */
+   }
+
+   /* Restauramos un tamaño de fuente más legible para el texto */
+   .intro-cursos-texto {
+      text-align: center; /* Centramos el texto ahora que ocupa todo el ancho */
+   }
+   .intro-cursos-texto .pregunta { font-size: 1.1em; margin-bottom: 10px; }
+   .intro-cursos-texto .lema-intro { font-size: 1.4em; margin-bottom: 15px; }
+   .intro-cursos-texto h2 { font-size: 1.3em; margin-bottom: 15px; text-align: center;} /* Centrar título lista */
+   .intro-cursos-texto ul { columns: 1; margin-bottom: 25px;} /* Lista en 1 columna */
+   .intro-cursos-texto li { font-size: 1em; margin-bottom: 10px; text-align: center;} /* Centrar items lista */
+   .intro-cursos-texto .subtexto { font-size: 0.8em; }
+   .intro-cursos-texto .boton-animado { font-size: 0.85em; padding: 10px 25px;} /* Botón tamaño normal */
 
    
-   .intro-cursos {
-    gap: 10px; 
-    padding: 10px;
-   }
-   .intro-cursos-imagenes {
-      flex-basis: 90px; 
-      gap: 5px;
-   }
-   .intro-cursos-imagenes img {
-      border-radius: 3px;
-   }
-  
-   .intro-cursos-texto .pregunta { font-size: 0.9em; margin-bottom: 8px; }
-   .intro-cursos-texto .lema-intro { font-size: 1.1em; margin-bottom: 12px; }
-   .intro-cursos-texto h2 { font-size: 1em; margin-bottom: 10px;}
-   .intro-cursos-texto ul { columns: 1; } 
-   .intro-cursos-texto li { font-size: 0.85em; margin-bottom: 5px; text-align: left;} 
-   .intro-cursos-texto .subtexto { font-size: 0.65em; }
-   .intro-cursos-texto .boton-animado { font-size: 0.75em; padding: 8px 15px;}
-
- 
    .whatsapp-flotante { width: 45px; height: 45px; bottom: 10px; right: 10px; } 
    .whatsapp-flotante i { font-size: 22px; }
 }
