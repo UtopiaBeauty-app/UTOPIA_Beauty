@@ -481,3 +481,248 @@ nav ul li a:hover {
     width: fit-content; 
     margin: 30px auto 0; 
 }
+
+.beneficios-academia {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 40px; 
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: var(--color-fondo-crema); 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.beneficios-texto {
+  flex: 1; 
+  min-width: 300px; 
+  text-align: left; 
+}
+
+.beneficios-texto h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-texto-cafe-oscuro);
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+.beneficios-texto ul {
+  list-style: none; 
+  padding-left: 10px; 
+  margin-bottom: 30px;
+}
+
+.beneficios-texto li {
+  font-family: 'Lora', serif;
+  font-size: 1.2em; 
+  margin-bottom: 15px; 
+  display: flex; 
+  align-items: center;
+}
+
+.beneficios-texto li i {
+  color: var(--color-primario-cafe); 
+  margin-right: 15px; 
+  font-size: 1.1em; 
+  width: 25px; 
+  text-align: center;
+}
+
+.beneficios-texto hr {
+  border: none;
+  border-top: 1px solid var(--color-fondo-gris); 
+  margin: 30px 0;
+}
+
+.beneficios-texto .lema {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5em; 
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.logo-beneficios {
+  text-align: center; 
+}
+
+.logo-beneficios img {
+  max-width: 100px; 
+  height: auto;
+  margin: 0 auto; 
+}
+
+.beneficios-imagenes {
+  flex: 1; 
+  min-width: 300px; 
+  display: flex;         /* Sigue siendo flex */
+  flex-direction: column; /* Sigue siendo columna */
+  gap: 15px;             /* Espacio entre imágenes */
+  justify-content: center; 
+}
+
+.beneficios-imagenes img {
+  width: 100%;             
+  max-height: 180px;    
+  object-fit: cover;       
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .beneficios-academia {
+    gap: 30px; 
+  }
+  .beneficios-texto h2 {
+    font-size: 1.8em;
+  }
+  .beneficios-texto li {
+    font-size: 1.1em;
+  }
+  .beneficios-texto .lema {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 600px) {
+  .beneficios-academia {
+    flex-direction: column; 
+  }
+  .beneficios-texto h2,
+  .beneficios-texto .lema {
+    text-align: center; 
+  }
+  .beneficios-imagenes {
+     grid-template-columns: 1fr; 
+  }
+}
+
+.intro-cursos {
+  display: flex;
+  flex-wrap: wrap; /* Para apilar en móvil */
+  gap: 30px; /* Espacio entre columnas */
+  align-items: flex-start; /* Alinea al inicio verticalmente */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 25px;
+  background-color: var(--color-blanco); /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.intro-cursos-imagenes {
+  flex: 1; /* Ocupa mitad del espacio */
+  min-width: 280px; /* Ancho mínimo */
+  display: flex;
+  flex-direction: column; /* Apila imágenes verticalmente */
+  gap: 10px; /* Espacio entre imágenes */
+}
+
+.intro-cursos-imagenes img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro-cursos-texto {
+  flex: 1.2; /* Ocupa un poco más de espacio que las imágenes */
+  min-width: 300px;
+  padding-left: 20px; /* Espacio a la izquierda del texto */
+  text-align: left;
+}
+
+.intro-cursos-texto .pregunta {
+  font-family: 'Lora', serif;
+  font-size: 1.4em;
+  color: var(--color-texto-cafe-oscuro);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.intro-cursos-texto .lema-intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  color: var(--color-primario-cafe);
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.separador-cursos {
+  border: none;
+  border-top: 1px solid var(--color-fondo-gris);
+  margin: 25px 0;
+}
+
+.intro-cursos-texto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em; /* Título de la lista un poco más pequeño */
+  color: var(--color-texto-cafe-oscuro);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-cursos-texto ul {
+  list-style: none; /* Sin puntos */
+  padding: 0;
+  margin-bottom: 30px; /* Espacio antes del botón */
+}
+
+.intro-cursos-texto li {
+  font-family: 'Lora', serif;
+  font-weight: 700; /* Texto en negrita */
+  font-size: 1.3em;
+  color: var(--color-texto-cafe-oscuro);
+  margin-bottom: 12px;
+  text-align: center; /* Centra los nombres de los cursos */
+}
+
+.intro-cursos-texto .subtexto {
+  font-weight: 400; /* Texto normal */
+  font-size: 0.8em; /* Más pequeño */
+  color: #666; /* Un gris */
+  display: block; /* En línea separada */
+  margin-top: 2px;
+}
+
+/* --- Ajustes responsivos para la sección intro --- */
+@media (max-width: 768px) {
+  .intro-cursos {
+    gap: 20px;
+  }
+  .intro-cursos-texto {
+    padding-left: 0; /* Sin padding extra en tablet/móvil */
+    text-align: center; /* Centra todo el texto */
+  }
+   .intro-cursos-texto ul {
+      columns: 2; /* Intenta poner la lista en 2 columnas */
+      column-gap: 20px;
+   }
+   .intro-cursos-texto li {
+       break-inside: avoid; /* Evita que un item se parta entre columnas */
+   }
+}
+
+@media (max-width: 600px) {
+  .intro-cursos {
+    flex-direction: column; /* Apila las columnas */
+  }
+  .intro-cursos-imagenes {
+      /* Muestra imágenes en grid en móvil */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+  }
+  .intro-cursos-imagenes img {
+      aspect-ratio: 1 / 1; /* Intenta hacerlas cuadradas */
+      object-fit: cover;
+  }
+   .intro-cursos-texto ul {
+      columns: 1; /* Una columna en móvil */
+   }
+}
