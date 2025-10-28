@@ -836,81 +836,87 @@ nav ul li a:hover {
    .whatsapp-flotante i { font-size: 22px; }
 }
 
-/* Estilos para Tablets y Móviles Grandes (Hasta 768px) */
+
 @media (max-width: 768px) {
 
-  /* ... (otros estilos responsivos para h1, h2, body, main, etc.) ... */
-
-  /* --- Página Cursos: Beneficios (AHORA APILADO EN MÓVIL) --- */
   .beneficios-academia {
-    flex-direction: column; /* Apilamos las columnas */
-    gap: 30px;
+    flex-direction: column; 
+    gap: 25px; /* Espacio ajustado */
     padding: 20px;
-    align-items: center; /* Centra los items horizontalmente */
+    align-items: center; 
   }
 
   .beneficios-texto {
-      flex-basis: auto;       /* Ancho automático */
+      flex-basis: auto;       
       min-width: auto;
-      width: 100%;           /* Ocupa todo el ancho disponible */
-      max-width: 500px;      /* Limita el ancho del texto para legibilidad */
-      padding-right: 0;       /* Sin padding extra */
-      text-align: center;     /* Centra todo el contenido de texto */
+      width: 100%;           
+      max-width: 500px;      
+      padding-right: 0;       
+      text-align: center;     
+      /* Quitamos margen inferior extra si lo había */
+      margin-bottom: 0; 
   }
-  .beneficios-texto h2 {
-      font-size: 1.8em;
-      text-align: center;
-      margin-bottom: 20px;
-  }
+  /* (Estilos internos de .beneficios-texto h2, ul, li, lema, hr se mantienen como antes) */
   .beneficios-texto ul {
-      padding-left: 0;       /* Sin padding a la lista */
-      display: inline-block;  /* Permite centrar la lista */
-      text-align: left;       /* Alinea el texto dentro de la lista a la izq. */
+      padding-left: 0;       
+      display: inline-block;  
+      text-align: left;       
   }
-  .beneficios-texto li {
-      font-size: 1.1em;
-      margin-bottom: 12px;
-  }
-   .beneficios-texto li i {
-       margin-right: 10px;
-       font-size: 1em;
-       width: 22px;
+   .beneficios-texto li {
+       font-size: 1.1em;
+       margin-bottom: 12px;
    }
-  .beneficios-texto .lema {
-      font-size: 1.3em;
-      text-align: center;
-      margin-bottom: 25px;
-  }
-   .logo-beneficios img {
-       max-width: 90px;
-       margin: 20px auto 0 auto; /* Centra logo con margen superior */
+    .beneficios-texto li i {
+        margin-right: 10px;
+        font-size: 1em;
+        width: 22px;
+    }
+   .beneficios-texto .lema {
+       font-size: 1.3em;
+       margin-bottom: 0; /* Sin margen inferior, el logo irá después */
    }
-   .beneficios-texto hr {
-       margin: 25px auto; /* Centra la línea */
-       max-width: 80%;
-   }
+    .beneficios-texto hr {
+        margin: 25px auto; 
+        max-width: 80%;
+    }
 
-  /* Columna de imágenes (ahora debajo del texto) */
+
+  /* Columna de imágenes (ahora en medio) */
   .beneficios-imagenes {
-      flex-basis: auto;      /* Ancho automático */
+      flex-basis: auto;      
       min-width: auto;
-      width: 100%;          /* Ocupa todo el ancho */
-      max-width: 350px;     /* Limita el ancho de la columna de imgs */
+      width: 100%;          
+      max-width: 300px; /* <<<< Hazla MÁS ESTRECHA */
       display: flex;
       flex-direction: column;
-      gap: 15px;            /* Espacio entre imágenes */
-      margin-top: 10px;     /* Espacio sobre las imágenes */
+      gap: 10px;            /* Espacio reducido entre imágenes */
+      /* margin-top: 0; */ /* Quitamos margen superior si lo había */
   }
 
   .beneficios-imagenes img {
       width: 100%;
       height: auto;
-      max-height: 200px;     /* Limita altura (ajusta si es necesario) */
+      max-height: 140px;     /* <<<< Hazlas MÁS BAJAS (ej. 140px) */
       object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 6px; /* Redondeo más sutil */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* ... (resto de tus estilos responsivos para otras secciones como .intro-cursos) ... */
+  /* Estilo para el logo (ahora al final) */
+  .logo-beneficios {
+      width: 100%; /* Ocupa el ancho para centrar la imagen */
+      text-align: center;
+      margin-top: 25px; /* Espacio sobre el logo */
+  }
+  .logo-beneficios img {
+      max-width: 80px;  /* Mantenemos logo pequeño */
+      margin: 0 auto;
+  }
 
 }
+
+
+  .whatsapp-flotante { width: 45px; height: 45px; bottom: 10px; right: 10px; }
+  .whatsapp-flotante i { font-size: 22px; }
+
+
