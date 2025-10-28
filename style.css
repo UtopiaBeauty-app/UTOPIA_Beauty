@@ -690,39 +690,95 @@ nav ul li a:hover {
   margin-top: 2px;
 }
 
-/* --- Ajustes responsivos para la sección intro --- */
-@media (max-width: 768px) {
-  .intro-cursos {
-    gap: 20px;
-  }
-  .intro-cursos-texto {
-    padding-left: 0; /* Sin padding extra en tablet/móvil */
-    text-align: center; /* Centra todo el texto */
-  }
-   .intro-cursos-texto ul {
-      columns: 2; /* Intenta poner la lista en 2 columnas */
-      column-gap: 20px;
-   }
-   .intro-cursos-texto li {
-       break-inside: avoid; /* Evita que un item se parta entre columnas */
-   }
-}
+/* --- 13. AJUSTES RESPONSIVOS --- */
 
-@media (max-width: 600px) {
-  .intro-cursos {
-    flex-direction: column; /* Apila las columnas */
+/* Estilos para Tablets y Móviles Grandes (Hasta 768px) */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.8em; }
+  .hero h1 { font-size: 2.5em; }
+
+  body { line-height: 1.6; }
+  .hero p { font-size: 1.1em; }
+  .servicio-categoria p { font-size: 1.2em; } /* Subtítulos categoría */
+  .descripcion-imagen { font-size: 1.1em; } /* Texto bajo imágenes galería */
+
+  main {
+    padding: 20px;
+    max-width: 95%; /* Permitir que ocupe más ancho */
+    margin-left: auto;
+    margin-right: auto;
+   }
+  .hero {
+    height: 50vh;
+    min-height: 350px;
+    margin: -20px -20px 30px -20px; /* Ajusta márgenes negativos al nuevo padding */
   }
+  .servicio-categoria { margin-top: 40px; margin-bottom: 40px; }
+  .galeria-horizontal { gap: 15px; }
+
+  /* Galería de Servicios/Cursos: 2 columnas */
+  .imagen-item {
+    flex-basis: calc(50% - 10px); /* Ajusta para 2 columnas con gap */
+   }
+
+  .boton-animado, .cta-button-hero { padding: 12px 30px; font-size: 0.9em; }
+
+  .logo { max-width: 150px; }
+
+  /* Contacto: Apilar columnas */
+  .contacto-container { flex-direction: column; }
+  .contacto-visual img { height: 300px; }
+
+  /* Detalle Servicio: Ajustar ancho y testimonios */
+  .servicio-detalle { max-width: 90%; }
+  .testimonio { flex-direction: column; text-align: center; }
+  .testimonio img { border-radius: 8px 8px 0 0; width: 100%; height: 150px; }
+  .testimonio-contenido { padding: 15px; }
+  .testimonio-contenido strong { text-align: center; }
+
+  /* Sección Beneficios Academia: Apilar columnas */
+  .beneficios-academia { flex-direction: column; gap: 30px; padding: 20px; }
+  .beneficios-texto h2, .beneficios-texto .lema { text-align: center; }
+  .beneficios-imagenes img { max-height: 150px; } /* Imágenes más pequeñas */
+
+  /* Sección Intro Cursos: Apilar columnas */
+  .intro-cursos { flex-direction: column; gap: 25px; padding: 20px;}
+  .intro-cursos-texto { padding-left: 0; text-align: center; }
+  /* Mostrar imágenes intro en grid */
   .intro-cursos-imagenes {
-      /* Muestra imágenes en grid en móvil */
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Grid adaptable */
       gap: 10px;
   }
   .intro-cursos-imagenes img {
       aspect-ratio: 1 / 1; /* Intenta hacerlas cuadradas */
       object-fit: cover;
   }
-   .intro-cursos-texto ul {
-      columns: 1; /* Una columna en móvil */
+  /* Lista de cursos intro en 2 columnas si caben */
+  .intro-cursos-texto ul { columns: 2; column-gap: 20px; }
+  .intro-cursos-texto li { break-inside: avoid; text-align: left; /* Alinea texto lista a izq */ }
+  .intro-cursos-texto h2 { text-align: center; } /* Centra el título de la lista */
+}
+
+/* Estilos para Móviles Pequeños (Hasta 480px) */
+@media (max-width: 480px) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.6em; }
+  .hero h1 { font-size: 2em; }
+  .hero p { font-size: 1em; }
+
+  /* Galería de Servicios/Cursos: 1 columna */
+  .imagen-item {
+    flex-basis: calc(100% - 10px); /* Ocupa casi todo el ancho */
    }
+
+  .logo { max-width: 120px; }
+
+  /* Lista de cursos intro en 1 columna */
+   .intro-cursos-texto ul { columns: 1; }
+   .intro-cursos-texto li { text-align: center; } /* Centra texto lista en móvil */
+
+   nav ul { flex-direction: column; gap: 5px; } /* Apila menú */
+   nav ul li a { padding: 8px 15px; }
 }
