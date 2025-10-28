@@ -62,33 +62,89 @@
     
     </main>
     <footer>
-        <p>Utopía </p>
-    </footer>
+      <p>Utopía </p> </footer>
 
-    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-        </a>
-    
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-        <script>
-          const swiper = new Swiper('.swiper', {
+  <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-            loop: true, 
-            autoplay: { 
-              delay: 3000, 
-              disableOnInteraction: false,
-            },
-            pagination: { 
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-            navigation: { 
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          });
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', { // Asegúrate que tu contenedor principal del carrusel tenga la clase "swiper"
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+      const sr = ScrollReveal({
+          distance: '60px',
+          duration: 1000,
+          easing: 'cubic-bezier(.69,.06,.15,.88)',
+          reset: false
+      });
+
+      // Animación para el Swiper
+      sr.reveal('.swiper', {
+          origin: 'top',
+          distance: '80px',
+          duration: 1200,
+          scale: 0.95,
+          rotate: { x: 5, y: 0, z: 0 }
+      });
+
+      // Animación para los títulos de la descripción
+      sr.reveal('.descripcion-acerca h2', {
+          origin: 'left',
+          distance: '40px',
+          duration: 900,
+          delay: 200,
+          interval: 0
+      });
+
+      // Animación para los párrafos de la descripción
+      sr.reveal('.descripcion-acerca p', {
+          origin: 'right',
+          distance: '40px',
+          duration: 900,
+          delay: 300,
+          interval: 0
+      });
+
+      // Animación para el botón de contacto
+      sr.reveal('.descripcion-acerca .boton-animado', {
+          origin: 'bottom',
+          distance: '30px',
+          duration: 800,
+          delay: 400
+      });
+
+      // Animaciones opcionales para footer y WhatsApp
+      // sr.reveal('footer', { origin: 'bottom', distance: '30px', delay: 500 });
+      // sr.reveal('.whatsapp-flotante', { origin: 'right', distance: '30px', delay: 600 });
+  </script>
+
+</body>
+</html>
+
+   
         </script>
+    </body>
+    </html>
     </body>
     </html>
     </a>

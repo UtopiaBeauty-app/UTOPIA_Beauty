@@ -152,22 +152,51 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+
 .imagen-item {
   background-color: var(--color-blanco);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   padding: 12px;
   text-align: center;
-  flex-basis: 220px;
+  flex-basis: 220px; 
   border: 1px solid var(--color-fondo-crema);
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+
+  transform-style: preserve-3d; 
+  perspective: 1200px;        
+  transition: transform 0.4s cubic-bezier(.69,.06,.15,.88), box-shadow 0.4s ease; 
   
-  display: flex;            
-  flex-direction: column;    
-  justify-content: space-between; 
+}
+
+.enlace-item:hover .imagen-item {
+  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg) scale(1.02); 
+  box-shadow: 0 15px 30px rgba(166, 120, 86, 0.3), 
+              0 0 0 5px rgba(166, 120, 86, 0.1); 
+}
+
+.enlace-item:hover .imagen-item img {
+  transform: scale(1.05); 
+}
+
+.imagen-item h3, .imagen-item p {
+  transform: translateZ(20px); 
+  transition: transform 0.4s ease;
+}
+
+.enlace-item:hover .imagen-item h3 {
+    color: var(--color-primario-cafe-oscuro); 
+    transform: translateZ(30px) scale(1.05);
+}
+.enlace-item:hover .imagen-item p {
+    transform: translateZ(25px);
+}
+
+
+.enlace-item:hover .imagen-item {
+  background-color: #fcf8f5; 
 }
 
 .imagen-item:hover {
@@ -850,17 +879,17 @@ nav ul li a:hover {
     width: 100%;           
     max-width: 500px;      
     padding-right: 0;       
-    text-align: center; /* <<<< ASEGURA CENTRADO GENERAL DEL TEXTO */
+    text-align: center; 
     margin-bottom: 0; 
 }
 
 .beneficios-texto ul {
     padding-left: 0;       
-    display: inline-block; /* Permite centrar el bloque ul */
-    text-align: left;    /* Alinea el texto LI a la izquierda */
-    margin-bottom: 25px; /* Espacio después de la lista */
+    display: inline-block; 
+    text-align: left;    
+    margin-bottom: 25px; 
 }
-/* (Estilos de li e i se mantienen) */
+
  .beneficios-texto li {
      font-size: 1.1em;
      margin-bottom: 12px;
@@ -871,7 +900,7 @@ nav ul li a:hover {
       width: 22px;
   }
 
-/* (Estilos de hr se mantienen) */
+
  .beneficios-texto hr {
      margin: 25px auto; 
      max-width: 80%;
@@ -879,9 +908,9 @@ nav ul li a:hover {
 
 .beneficios-texto .lema {
     font-size: 1.3em;
-    text-align: center; /* <<<< ASEGURA CENTRADO DEL LEMA */
-    margin-bottom: 0; /* Sin margen inferior, el logo irá después */
-    padding: 0 10px; /* Evita que toque los bordes si es largo */
+    text-align: center; 
+    margin-bottom: 0; 
+    padding: 0 10px; 
 }
 
 
@@ -895,7 +924,7 @@ nav ul li a:hover {
     gap: 10px;            
     margin-top: 10px;     
 }
-/* (Estilos de img se mantienen) */
+
 .beneficios-imagenes img {
     width: 100%;
     height: auto;
@@ -906,17 +935,421 @@ nav ul li a:hover {
 }
 .logo-beneficios {
     width: 100%;
-    text-align: center; /* <<<< ASEGURA CENTRADO DEL CONTENEDOR DEL LOGO */
-    margin-top: 30px; /* <<<< AUMENTA ESPACIO SOBRE EL LOGO */
-    margin-bottom: 10px; /* Espacio debajo */
+    text-align: center; 
+    margin-top: 30px; 
+    margin-bottom: 10px; 
 }
 .logo-beneficios img {
     max-width: 90px;
-    margin: 0 auto; /* <<<< ASEGURA CENTRADO DE LA IMAGEN DEL LOGO */
+    margin: 0 auto; 
+}
+
+.whatsapp-flotante { 
+    width: 45px; height: 45px; bottom: 10px; right: 10px; }
+.whatsapp-flotante i { 
+    font-size: 22px; }
+
+    
+.focus-zoom-gallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 20px auto 40px auto;
+}
+
+.focus-zoom-item {
+  position: relative; 
+  flex-basis: 300px; 
+  max-width: 90%; 
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer; 
+}
+
+.focus-zoom-item img {
+  display: block;
+  width: 100%;
+  height: auto; 
+  aspect-ratio: 4 / 3; 
+  object-fit: cover; 
+  transition: transform 0.4s ease-out; 
+}
+
+.focus-zoom-item:hover img {
+  transform: scale(1); 
 }
 
 
-  .whatsapp-flotante { width: 45px; height: 45px; bottom: 10px; right: 10px; }
-  .whatsapp-flotante i { font-size: 22px; }
+.focus-zoom-caption {
+  position: absolute;  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(252, 252, 252, 0.9), rgb(251, 251, 251) 70%, transparent);
+  color: var(--color-blanco);
+  padding: 20px 10px 10px 10px; 
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0;
+  opacity: 0; 
+  transform: translateY(10px); 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; 
+}
 
 
+.focus-zoom-item:hover .focus-zoom-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 650px) { 
+  .focus-zoom-gallery {
+    gap: 20px;
+  }
+  .focus-zoom-item {
+    flex-basis: 100%; 
+    max-width: 400px; 
+  }
+    
+  .focus-zoom-item .focus-zoom-caption {
+      opacity: 1;
+      transform: translateY(0);
+      position: static; 
+      background: var(--color-primario-cafe); 
+      padding: 15px 10px;
+      border-radius: 0 0 8px 8px; 
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+      margin-top: -5px; 
+  }
+    
+    .focus-zoom-item:hover img {
+        transform: scale(1);
+    }
+}
+/* --- 0. Fondo Animado "Increíble" para el Body --- */
+body {
+  /* Usamos tus colores principales, ajusta si prefieres otros */
+  background: linear-gradient(135deg, var(--color-fondo-crema) 0%, var(--color-primario-cafe-claro) 50%, var(--color-fondo-rosita) 100%);
+  background-size: 400% 400%; /* Tamaño para que el degradado se mueva */
+  animation: gradientAnimation 15s ease infinite; /* Animación de 15s */
+  min-height: 100vh; /* Asegura que el degradado ocupe toda la altura */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- 1. Ajustes para el Main (que el contenido "flote") --- */
+main {
+  background-color: rgba(255, 255, 255, 0.9); /* Un blanco semitransparente para el contenido */
+  max-width: 900px; /* Ancho máximo para tu contenido */
+  margin: 30px auto; /* Centra el contenido y le da espacio arriba/abajo */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), /* Sombra principal más pronunciada */
+              0 0 0 8px rgba(166, 120, 86, 0.1); /* Borde sutil de color café */
+  position: relative;
+  /* Efecto 3D sutil para el main */
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  transition: transform 0.5s ease-out;
+}
+
+/* Opcional: Levantar el main ligeramente al hacer hover sobre él (en caso de que sea interactivo) */
+main:hover {
+  transform: translateY(-5px) translateZ(10px);
+}
+
+
+/* --- 2. Estilos Swiper para Efecto 3D --- */
+.swiper {
+  width: 100%;
+  height: 400px; /* Ajusta la altura según tus imágenes */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para el carrusel */
+  transform: translateZ(30px); /* Empuja el Swiper hacia el frente en 3D */
+  transition: transform 0.5s ease-out; /* Transición para posible hover */
+}
+
+/* Opcional: efecto al pasar el ratón sobre el Swiper */
+.swiper:hover {
+  transform: translateZ(50px) translateY(-5px) rotateX(1deg) rotateY(-1deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-fondo-crema); /* Fondo si la imagen no ocupa todo */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformar */
+}
+
+/* --- 3. Mejoras visuales para Controles Swiper --- */
+.swiper-pagination-bullet {
+  background-color: rgba(166, 120, 86, 0.7); /* Color café para los puntos de paginación */
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primario-cafe);
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  box-shadow: 0 0 5px var(--color-primario-cafe-oscuro);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-primario-cafe-oscuro); /* Flechas de navegación */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px; /* Tamaño del icono de la flecha */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: var(--color-primario-cafe);
+  color: var(--color-blanco);
+  transform: scale(1.1);
+}
+
+/* --- 4. Mejoras para la descripción de acerca --- */
+.descripcion-acerca {
+  padding: 30px;
+  text-align: center;
+  background-color: var(--color-blanco); /* Fondo para el texto */
+  border-radius: 12px;
+  margin-top: 30px; /* Espacio entre Swiper y texto */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateZ(20px); /* Ligeramente hacia el frente */
+  transition: transform 0.5s ease-out;
+}
+
+.descripcion-acerca h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-primario-cafe-oscuro);
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  transform: translateZ(10px); /* Pop para el título */
+}
+
+.descripcion-acerca p {
+  font-family: 'Lora', serif;
+  color: var(--color-texto-oscuro);
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateZ(5px); /* Pop para el párrafo */
+}
+
+/* --- Ajustes responsivos --- */
+@media (max-width: 768px) {
+  main {
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  .swiper {
+      height: 300px; /* Menor altura en móvil */
+      border-radius: 10px;
+  }
+  .descripcion-acerca h2 {
+      font-size: 1.8em;
+  }
+  .descripcion-acerca p {
+      font-size: 1em;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+      width: 30px;
+      height: 30px;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+      margin: 15px auto;
+      padding: 15px;
+  }
+  .swiper {
+      height: 250px; /* Aún menor altura en móviles pequeños */
+  }
+}
+
+/* --- AJUSTES EN MAIN (SI NO LOS TIENES YA) --- */
+main {
+  /* ... (tus estilos actuales: max-width, margin, padding, etc.) ... */
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+}
+
+/* --- ESTILOS MEJORADOS PÁGINA DE CONTACTO --- */
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Más espacio */
+  text-align: left;
+  align-items: center; /* Centra verticalmente las columnas */
+  transform: translateZ(20px); /* Ligeramente hacia el frente */
+}
+
+.contacto-info {
+  flex: 1.5; /* Un poco más de espacio para el texto */
+  min-width: 300px;
+  transform: translateZ(10px); /* Pop sutil */
+}
+
+.contacto-visual {
+  flex: 1;
+  min-width: 280px;
+  transform-style: preserve-3d; /* Para efecto 3D en imagen */
+  perspective: 1000px;
+}
+
+.contacto-visual img {
+  width: 100%;
+  /* height: 450px; */ /* Quita altura fija para que sea responsiva */
+  aspect-ratio: 3 / 4; /* Proporción más vertical */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s cubic-bezier(.69,.06,.15,.88), box-shadow 0.4s ease; /* Transición suave */
+}
+
+/* Efecto Hover 3D en Imagen */
+.contacto-visual img:hover {
+  transform: rotateY(-5deg) rotateX(3deg) scale(1.03) translateZ(20px); /* Inclinación 3D */
+  box-shadow: 0 15px 35px rgba(74, 57, 49, 0.3); /* Sombra café más pronunciada */
+}
+
+/* Títulos y Texto */
+.contacto-info h2 {
+  font-size: 2.4em; /* Ligeramente más grande */
+  border-bottom: 2px solid var(--color-primario-cafe);
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  transform: translateZ(5px);
+}
+.contacto-info p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: var(--color-texto-cafe-oscuro);
+  margin-bottom: 30px; /* Más espacio antes de redes */
+}
+
+/* Redes Sociales con Efecto Hover 3D */
+.redes-sociales { list-style: none; padding: 0; margin-top: 20px; }
+.redes-sociales li { margin-bottom: 25px; } /* Más espacio */
+.redes-sociales li a {
+  display: inline-flex; /* Permite transformaciones y mantiene flujo */
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.1em;
+  color: var(--color-texto-cafe-oscuro);
+  font-weight: 700;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+.redes-sociales li a:hover {
+  color: var(--color-primario-cafe);
+  transform: translateY(-4px) translateZ(15px) scale(1.05); /* Levanta y acerca */
+}
+
+.redes-sociales i {
+  font-size: 1.8em;
+  color: var(--color-primario-cafe);
+  margin-right: 15px;
+  width: 35px;
+  text-align: center;
+  transition: color 0.3s ease;
+  transform: translateZ(10px); /* Ligeramente al frente */
+}
+.redes-sociales li a:hover i {
+  color: var(--color-texto-cafe-oscuro); /* Cambio de color icono al hacer hover */
+}
+.redes-sociales span { /* Estilo para el texto junto al icono */
+  transform: translateZ(5px);
+}
+
+
+/* --- Ajustes Responsivos para Contacto --- */
+@media (max-width: 768px) {
+  /* (Se mantienen los ajustes generales de fuentes, main, etc.) */
+  .contacto-container {
+      flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+      gap: 30px;
+      align-items: center; /* Centrar items */
+  }
+  .contacto-info {
+      flex: 1; /* Resetear flex */
+      text-align: center; /* Centrar texto */
+      padding: 0 15px; /* Padding lateral */
+  }
+  .contacto-info h2 {
+      text-align: center;
+      border-bottom: none; /* Quitar borde en móvil */
+      border-top: 2px solid var(--color-primario-cafe); /* Poner borde arriba */
+      padding-top: 15px;
+      padding-bottom: 0;
+  }
+  .redes-sociales {
+      display: flex; /* Poner redes en fila */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px 30px; /* Espacio vertical y horizontal */
+  }
+  .redes-sociales li { margin-bottom: 0; } /* Resetear margen */
+
+  .contacto-visual {
+      flex: 1; /* Resetear flex */
+      width: 90%; /* Ancho imagen */
+      max-width: 400px;
+  }
+   .contacto-visual img:hover { /* Desactivar hover complejo en móvil */
+       transform: none;
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+   }
+   .redes-sociales li a:hover { /* Desactivar hover complejo en móvil */
+       transform: none;
+   }
+}
