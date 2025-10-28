@@ -740,49 +740,88 @@ nav ul li a:hover {
 
 /* Estilos para Móviles Pequeños (Hasta 480px) */
 @media (max-width: 480px) {
+  /* --- Fuentes --- */
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.5em; }
+  .hero h1 { font-size: 2em; }
+  .hero p { font-size: 1em; }
+  body { font-size: 14px; }
+  .servicio-categoria p { font-size: 1.1em; }
+  .descripcion-imagen { font-size: 1em; }
+  .servicio-detalle p, .servicio-detalle li { font-size: 0.95em; }
+  .contacto-info p, .redes-sociales li a { font-size: 0.95em; }
+  .beneficios-texto li { font-size: 1em; }
+  .beneficios-texto .lema { font-size: 1.1em; }
 
-  /* ... (otros estilos responsivos para h1, h2, body, main, logo, nav, galerías, etc. se mantienen como en la respuesta anterior) ... */
+  /* --- Layout General --- */
+  main { padding: 10px; }
+  .hero { margin: -10px -10px 20px -10px; min-height: 250px; }
 
-   /* --- Página Cursos: Intro --- */
-   .intro-cursos {
-    flex-direction: column; /* Apilamos las columnas principales */
-    gap: 20px; /* Espacio entre bloque de imágenes y bloque de texto */
-    padding: 15px; /* Padding ajustado */
+  /* --- Logo y Navegación --- */
+  .logo { max-width: 100px; }
+  nav ul { flex-direction: column; gap: 5px; }
+  nav ul li a { padding: 8px 15px; text-align: center; }
+
+  /* --- Galerías (1 columna) --- */
+  .imagen-item { flex-basis: calc(100% - 10px); }
+
+  /* --- Página Cursos: Beneficios --- */
+  .beneficios-academia { flex-direction: column; } /* Asegura apilado */
+  .beneficios-imagenes { grid-template-columns: repeat(2, 1fr); }
+  .beneficios-imagenes img { max-height: 120px; }
+
+  /* --- Página Cursos: Intro (AHORA CON 2 COLUMNAS EN MÓVIL) --- */
+  .intro-cursos {
+    /* flex-direction: column; */ /* Quitamos el apilado */
+    display: flex;           /* Mantenemos flex horizontal */
+    flex-wrap: nowrap;       /* Evitamos que se envuelva */
+    gap: 15px;              /* Espacio entre columnas */
+    padding: 15px;
+    align-items: flex-start;  /* Alinea columnas arriba */
+  }
+
+  .intro-cursos-imagenes {
+      /* display: flex; flex-direction: column; */ /* Mantenemos apilado vertical de imgs */
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 40%; /* Ancho fijo para columna de imágenes (ajusta %) */
+      gap: 8px;             /* Espacio entre imágenes */
+      min-width: auto;      /* Resetea min-width */
+      /* margin-bottom: 0; */ /* Quitamos margen inferior si existía */
+  }
+
+  .intro-cursos-imagenes img {
+      width: 100%;           /* Imagen ocupa ancho de su columna */
+      height: auto;           /* Altura automática */
+      /* max-height: none; */   /* Quitamos max-height si lo pusimos antes */
+      /* object-fit: contain; */ /* Puedes usar cover o contain */
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .intro-cursos-texto {
+      flex: 1 1 auto;       /* Texto ocupa el resto */
+      text-align: left;       /* Alineamos texto a la izquierda */
+      padding-left: 10px;     /* Espacio junto a imágenes */
+      min-width: auto;      /* Resetea min-width */
+  }
+
+  .intro-cursos-texto .pregunta { font-size: 0.9em; margin-bottom: 8px; line-height: 1.3;}
+  .intro-cursos-texto .lema-intro { font-size: 1.1em; margin-bottom: 12px; line-height: 1.3;}
+  .intro-cursos-texto h2 { font-size: 1em; margin-bottom: 10px; text-align: center;} /* Título lista centrado */
+  .intro-cursos-texto ul { columns: 1; margin-bottom: 15px;} /* Lista en 1 columna */
+  .intro-cursos-texto li { font-size: 0.85em; margin-bottom: 5px; text-align: center;} /* Items lista centrados */
+  .intro-cursos-texto .subtexto { font-size: 0.7em; }
+  .intro-cursos-texto .boton-animado {
+       font-size: 0.75em;
+       padding: 8px 15px;
+       display: block; /* Para centrar con margin auto */
+       width: fit-content;
+       margin: 15px auto 0 auto; 
    }
 
-   /* Hacemos que las imágenes se muestren en fila y envuelvan */
-   .intro-cursos-imagenes {
-      display: flex;        /* Usar flex */
-      flex-wrap: wrap;      /* Permitir que envuelvan a la siguiente línea */
-      justify-content: center; /* Centrar las imágenes */
-      gap: 10px;            /* Espacio entre imágenes */
-      margin-bottom: 20px; /* Espacio debajo del bloque de imágenes */
-   }
 
-   /* Damos un tamaño fijo a cada imagen en la fila */
-   .intro-cursos-imagenes img {
-      width: 100px; /* Ancho fijo (puedes ajustar) */
-      height: 100px; /* Alto fijo (para hacerlas cuadradas) */
-      object-fit: cover; /* Recortar para llenar el cuadrado */
-      border-radius: 6px; /* Redondeo */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      flex-grow: 0; /* Evita que crezcan */
-      flex-shrink: 0; /* Evita que encojan */
-   }
-
-   /* Restauramos un tamaño de fuente más legible para el texto */
-   .intro-cursos-texto {
-      text-align: center; /* Centramos el texto ahora que ocupa todo el ancho */
-   }
-   .intro-cursos-texto .pregunta { font-size: 1.1em; margin-bottom: 10px; }
-   .intro-cursos-texto .lema-intro { font-size: 1.4em; margin-bottom: 15px; }
-   .intro-cursos-texto h2 { font-size: 1.3em; margin-bottom: 15px; text-align: center;} /* Centrar título lista */
-   .intro-cursos-texto ul { columns: 1; margin-bottom: 25px;} /* Lista en 1 columna */
-   .intro-cursos-texto li { font-size: 1em; margin-bottom: 10px; text-align: center;} /* Centrar items lista */
-   .intro-cursos-texto .subtexto { font-size: 0.8em; }
-   .intro-cursos-texto .boton-animado { font-size: 0.85em; padding: 10px 25px;} /* Botón tamaño normal */
-
-   
-   .whatsapp-flotante { width: 45px; height: 45px; bottom: 10px; right: 10px; } 
+   .whatsapp-flotante { width: 45px; height: 45px; bottom: 10px; right: 10px; }
    .whatsapp-flotante i { font-size: 22px; }
 }
