@@ -837,82 +837,82 @@ nav ul li a:hover {
 }
 
 
-@media (max-width: 768px) {
+.beneficios-academia {
+  flex-direction: column; 
+  gap: 25px;
+  padding: 20px;
+  align-items: center; 
+}
 
-  .beneficios-academia {
-    flex-direction: column; 
-    gap: 25px; /* Espacio ajustado */
-    padding: 20px;
-    align-items: center; 
+.beneficios-texto {
+    flex-basis: auto;       
+    min-width: auto;
+    width: 100%;           
+    max-width: 500px;      
+    padding-right: 0;       
+    text-align: center; /* <<<< ASEGURA CENTRADO GENERAL DEL TEXTO */
+    margin-bottom: 0; 
+}
+
+.beneficios-texto ul {
+    padding-left: 0;       
+    display: inline-block; /* Permite centrar el bloque ul */
+    text-align: left;    /* Alinea el texto LI a la izquierda */
+    margin-bottom: 25px; /* Espacio después de la lista */
+}
+/* (Estilos de li e i se mantienen) */
+ .beneficios-texto li {
+     font-size: 1.1em;
+     margin-bottom: 12px;
+ }
+  .beneficios-texto li i {
+      margin-right: 10px;
+      font-size: 1em;
+      width: 22px;
   }
 
-  .beneficios-texto {
-      flex-basis: auto;       
-      min-width: auto;
-      width: 100%;           
-      max-width: 500px;      
-      padding-right: 0;       
-      text-align: center;     
-      /* Quitamos margen inferior extra si lo había */
-      margin-bottom: 0; 
-  }
-  /* (Estilos internos de .beneficios-texto h2, ul, li, lema, hr se mantienen como antes) */
-  .beneficios-texto ul {
-      padding-left: 0;       
-      display: inline-block;  
-      text-align: left;       
-  }
-   .beneficios-texto li {
-       font-size: 1.1em;
-       margin-bottom: 12px;
-   }
-    .beneficios-texto li i {
-        margin-right: 10px;
-        font-size: 1em;
-        width: 22px;
-    }
-   .beneficios-texto .lema {
-       font-size: 1.3em;
-       margin-bottom: 0; /* Sin margen inferior, el logo irá después */
-   }
-    .beneficios-texto hr {
-        margin: 25px auto; 
-        max-width: 80%;
-    }
+/* (Estilos de hr se mantienen) */
+ .beneficios-texto hr {
+     margin: 25px auto; 
+     max-width: 80%;
+ }
+
+.beneficios-texto .lema {
+    font-size: 1.3em;
+    text-align: center; /* <<<< ASEGURA CENTRADO DEL LEMA */
+    margin-bottom: 0; /* Sin margen inferior, el logo irá después */
+    padding: 0 10px; /* Evita que toque los bordes si es largo */
+}
 
 
-  /* Columna de imágenes (ahora en medio) */
-  .beneficios-imagenes {
-      flex-basis: auto;      
-      min-width: auto;
-      width: 100%;          
-      max-width: 300px; /* <<<< Hazla MÁS ESTRECHA */
-      display: flex;
-      flex-direction: column;
-      gap: 10px;            /* Espacio reducido entre imágenes */
-      /* margin-top: 0; */ /* Quitamos margen superior si lo había */
-  }
-
-  .beneficios-imagenes img {
-      width: 100%;
-      height: auto;
-      max-height: 140px;     /* <<<< Hazlas MÁS BAJAS (ej. 140px) */
-      object-fit: cover;
-      border-radius: 6px; /* Redondeo más sutil */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Estilo para el logo (ahora al final) */
-  .logo-beneficios {
-      width: 100%; /* Ocupa el ancho para centrar la imagen */
-      text-align: center;
-      margin-top: 25px; /* Espacio sobre el logo */
-  }
-  .logo-beneficios img {
-      max-width: 80px;  /* Mantenemos logo pequeño */
-      margin: 0 auto;
-  }
-
+.beneficios-imagenes {
+    flex-basis: auto;      
+    min-width: auto;
+    width: 100%;          
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;            
+    margin-top: 10px;     
+}
+/* (Estilos de img se mantienen) */
+.beneficios-imagenes img {
+    width: 100%;
+    height: auto;
+    max-height: 140px;     
+    object-fit: cover;
+    border-radius: 6px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.logo-beneficios {
+    width: 100%;
+    text-align: center; /* <<<< ASEGURA CENTRADO DEL CONTENEDOR DEL LOGO */
+    margin-top: 30px; /* <<<< AUMENTA ESPACIO SOBRE EL LOGO */
+    margin-bottom: 10px; /* Espacio debajo */
+}
+.logo-beneficios img {
+    max-width: 90px;
+    margin: 0 auto; /* <<<< ASEGURA CENTRADO DE LA IMAGEN DEL LOGO */
 }
 
 
