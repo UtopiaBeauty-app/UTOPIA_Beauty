@@ -693,92 +693,131 @@ nav ul li a:hover {
 /* --- 13. AJUSTES RESPONSIVOS --- */
 
 /* Estilos para Tablets y Móviles Grandes (Hasta 768px) */
+/* --- 13. AJUSTES RESPONSIVOS --- */
+
+/* Estilos para Tablets y Móviles Grandes (Hasta 768px) */
 @media (max-width: 768px) {
+  /* --- Fuentes --- */
   h1 { font-size: 2.2em; }
   h2 { font-size: 1.8em; }
-  .hero h1 { font-size: 2.5em; }
-
-  body { line-height: 1.6; }
+  .hero h1 { font-size: 2.5em; } /* Título del Hero más grande */
+  body { line-height: 1.6; font-size: 15px; } /* Ajuste tamaño base */
   .hero p { font-size: 1.1em; }
   .servicio-categoria p { font-size: 1.2em; } /* Subtítulos categoría */
   .descripcion-imagen { font-size: 1.1em; } /* Texto bajo imágenes galería */
+  .servicio-detalle p, .servicio-detalle li { font-size: 1em; line-height: 1.7; }
+  .contacto-info p, .redes-sociales li a { font-size: 1em; }
+  .beneficios-texto li { font-size: 1.1em; }
+  .beneficios-texto .lema { font-size: 1.3em; }
+  .intro-cursos-texto .pregunta { font-size: 1.3em; }
+  .intro-cursos-texto .lema-intro { font-size: 1.6em; }
+  .intro-cursos-texto li { font-size: 1.2em; }
 
+  /* --- Layout General --- */
   main {
-    padding: 20px;
-    max-width: 95%; /* Permitir que ocupe más ancho */
+    padding: 15px; /* Menos padding lateral */
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
    }
-  .hero {
-    height: 50vh;
-    min-height: 350px;
-    margin: -20px -20px 30px -20px; /* Ajusta márgenes negativos al nuevo padding */
-  }
-  .servicio-categoria { margin-top: 40px; margin-bottom: 40px; }
-  .galeria-horizontal { gap: 15px; }
+   header { padding: 15px; }
 
-  /* Galería de Servicios/Cursos: 2 columnas */
+  /* --- Logo y Navegación --- */
+  .logo { max-width: 140px; margin-bottom: 10px; }
+  nav ul { gap: 5px; } /* Menos espacio en menú */
+  nav ul li a { padding: 8px 12px; font-size: 0.9em;}
+
+  /* --- Hero Section --- */
+  .hero {
+    height: auto; /* Altura automática */
+    min-height: 300px; /* Altura mínima menor */
+    margin: -15px -15px 30px -15px; /* Ajusta márgenes negativos */
+    padding: 30px 15px; /* Padding interno */
+  }
+
+  /* --- Secciones y Galerías --- */
+  .servicio-categoria { margin-top: 30px; margin-bottom: 30px; }
+  .galeria-horizontal { gap: 15px; }
+  /* 2 columnas para items */
   .imagen-item {
-    flex-basis: calc(50% - 10px); /* Ajusta para 2 columnas con gap */
+    flex-basis: calc(50% - 10px);
    }
 
-  .boton-animado, .cta-button-hero { padding: 12px 30px; font-size: 0.9em; }
+  /* --- Botones --- */
+  .boton-animado, .cta-button-hero { padding: 12px 25px; font-size: 0.9em; }
 
-  .logo { max-width: 150px; }
-
-  /* Contacto: Apilar columnas */
-  .contacto-container { flex-direction: column; }
+  /* --- Página de Contacto --- */
+  .contacto-container { flex-direction: column; gap: 20px;}
   .contacto-visual img { height: 300px; }
+  .redes-sociales i { font-size: 1.6em; margin-right: 10px; }
 
-  /* Detalle Servicio: Ajustar ancho y testimonios */
-  .servicio-detalle { max-width: 90%; }
-  .testimonio { flex-direction: column; text-align: center; }
-  .testimonio img { border-radius: 8px 8px 0 0; width: 100%; height: 150px; }
+  /* --- Página Detalle Servicio --- */
+  .servicio-detalle { max-width: 95%; }
+  .testimonio { flex-direction: column; text-align: center; gap: 10px;}
+  .testimonio img { border-radius: 8px 8px 0 0; width: 100%; height: 180px; } /* Imagen testimonio más alta */
   .testimonio-contenido { padding: 15px; }
   .testimonio-contenido strong { text-align: center; }
 
-  /* Sección Beneficios Academia: Apilar columnas */
-  .beneficios-academia { flex-direction: column; gap: 30px; padding: 20px; }
+  /* --- Página Cursos: Beneficios --- */
+  .beneficios-academia { flex-direction: column; gap: 25px; padding: 15px; }
   .beneficios-texto h2, .beneficios-texto .lema { text-align: center; }
-  .beneficios-imagenes img { max-height: 150px; } /* Imágenes más pequeñas */
+  .beneficios-imagenes { grid-template-columns: repeat(2, 1fr); gap: 10px;} /* Mantiene grid 2x2 */
+  .beneficios-imagenes img { max-height: none; aspect-ratio: 1 / 1; } /* Hacerlas cuadradas */
 
-  /* Sección Intro Cursos: Apilar columnas */
-  .intro-cursos { flex-direction: column; gap: 25px; padding: 20px;}
+  /* --- Página Cursos: Intro --- */
+  .intro-cursos { flex-direction: column; gap: 20px; padding: 15px;}
   .intro-cursos-texto { padding-left: 0; text-align: center; }
-  /* Mostrar imágenes intro en grid */
   .intro-cursos-imagenes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Grid adaptable */
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Grid adaptable más grande */
       gap: 10px;
   }
-  .intro-cursos-imagenes img {
-      aspect-ratio: 1 / 1; /* Intenta hacerlas cuadradas */
-      object-fit: cover;
+  .intro-cursos-imagenes img { aspect-ratio: 1 / 1; }
+  .intro-cursos-texto ul { columns: 2; column-gap: 20px; } /* 2 columnas lista */
+  .intro-cursos-texto li { break-inside: avoid; text-align: left; }
+  .intro-cursos-texto h2 { text-align: center; }
+
+  /* --- Carrusel (Swiper en Acerca de) --- */
+  .swiper { height: 300px; max-width: 90%; } /* Carrusel más pequeño */
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 20px !important; /* Flechas más pequeñas */
   }
-  /* Lista de cursos intro en 2 columnas si caben */
-  .intro-cursos-texto ul { columns: 2; column-gap: 20px; }
-  .intro-cursos-texto li { break-inside: avoid; text-align: left; /* Alinea texto lista a izq */ }
-  .intro-cursos-texto h2 { text-align: center; } /* Centra el título de la lista */
 }
 
 /* Estilos para Móviles Pequeños (Hasta 480px) */
 @media (max-width: 480px) {
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.6em; }
+  /* --- Fuentes --- */
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.5em; }
   .hero h1 { font-size: 2em; }
   .hero p { font-size: 1em; }
+  body { font-size: 14px; }
+  .servicio-categoria p { font-size: 1.1em; }
+  .descripcion-imagen { font-size: 1em; }
 
-  /* Galería de Servicios/Cursos: 1 columna */
+  /* --- Layout General --- */
+  main { padding: 10px; }
+  .hero { margin: -10px -10px 20px -10px; min-height: 280px; } /* Ajusta márgenes negativos */
+
+  /* --- Logo y Navegación --- */
+  .logo { max-width: 120px; }
+  nav ul { flex-direction: column; gap: 5px; } /* Apila menú */
+  nav ul li a { padding: 8px 15px; text-align: center; }
+
+  /* --- Galerías --- */
+  /* 1 columna para items */
   .imagen-item {
-    flex-basis: calc(100% - 10px); /* Ocupa casi todo el ancho */
+    flex-basis: calc(100% - 10px);
    }
 
-  .logo { max-width: 120px; }
+  /* --- Página Cursos: Beneficios --- */
+   .beneficios-imagenes { grid-template-columns: repeat(2, 1fr); } /* Mantiene 2 columnas grid */
 
-  /* Lista de cursos intro en 1 columna */
-   .intro-cursos-texto ul { columns: 1; }
-   .intro-cursos-texto li { text-align: center; } /* Centra texto lista en móvil */
+   /* --- Página Cursos: Intro --- */
+   .intro-cursos-texto ul { columns: 1; } /* 1 columna lista */
+   .intro-cursos-texto li { text-align: center; }
 
-   nav ul { flex-direction: column; gap: 5px; } /* Apila menú */
-   nav ul li a { padding: 8px 15px; }
+   /* --- Botón WhatsApp --- */
+   .whatsapp-flotante { width: 50px; height: 50px; bottom: 15px; right: 15px; }
+   .whatsapp-flotante i { font-size: 25px; }
 }
