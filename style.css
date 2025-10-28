@@ -764,27 +764,48 @@ nav ul li a:hover {
   .beneficios-imagenes { grid-template-columns: repeat(2, 1fr); gap: 10px;} /* Mantiene grid 2x2 */
   .beneficios-imagenes img { max-height: none; aspect-ratio: 1 / 1; } /* Hacerlas cuadradas */
 
-  /* --- Página Cursos: Intro --- */
-  .intro-cursos { flex-direction: column; gap: 20px; padding: 15px;}
-  .intro-cursos-texto { padding-left: 0; text-align: center; }
-  .intro-cursos-imagenes {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Grid adaptable más grande */
-      gap: 10px;
+  .intro-cursos {
+    flex-direction: column; /* Asegura que las columnas principales se apilen */
+    gap: 25px;
+    padding: 15px;
   }
-  .intro-cursos-imagenes img { aspect-ratio: 1 / 1; }
-  .intro-cursos-texto ul { columns: 2; column-gap: 20px; } /* 2 columnas lista */
-  .intro-cursos-texto li { break-inside: avoid; text-align: left; }
+  .intro-cursos-texto {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+
+  .intro-cursos-imagenes {
+      display: flex;             
+      flex-direction: column;    
+      gap: 15px;                 
+      width: 100%;              
+      max-width: 400px;          
+      margin: 0 auto 20px auto; 
+  }
+  
+  
+  .intro-cursos-imagenes img {
+      height: auto;               
+      object-fit: cover;         
+      max-height: 250px;          
+      width: 100%;               
+  }
+  
+  
+  .intro-cursos-texto ul { columns: 1; }
+  .intro-cursos-texto li { text-align: center; }
   .intro-cursos-texto h2 { text-align: center; }
 
-  /* --- Carrusel (Swiper en Acerca de) --- */
-  .swiper { height: 300px; max-width: 90%; } /* Carrusel más pequeño */
+
+  .swiper { height: 300px; max-width: 90%; } 
   .swiper-button-next:after,
   .swiper-button-prev:after {
-    font-size: 20px !important; /* Flechas más pequeñas */
+    font-size: 20px !important; 
   }
 }
 
-/* Estilos para Móviles Pequeños (Hasta 480px) */
+
 @media (max-width: 480px) {
   /* --- Fuentes --- */
   h1 { font-size: 1.8em; }
