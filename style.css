@@ -559,9 +559,9 @@ nav ul li a:hover {
 .beneficios-imagenes {
   flex: 1; 
   min-width: 300px; 
-  display: flex;         /* Sigue siendo flex */
-  flex-direction: column; /* Sigue siendo columna */
-  gap: 15px;             /* Espacio entre imágenes */
+  display: flex;         
+  flex-direction: column; 
+  gap: 15px;             
   justify-content: center; 
 }
 
@@ -603,23 +603,23 @@ nav ul li a:hover {
 
 .intro-cursos {
   display: flex;
-  flex-wrap: wrap; /* Para apilar en móvil */
-  gap: 30px; /* Espacio entre columnas */
-  align-items: flex-start; /* Alinea al inicio verticalmente */
+  flex-wrap: wrap; 
+  gap: 30px; 
+  align-items: flex-start; 
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 25px;
-  background-color: var(--color-blanco); /* Fondo blanco */
+  background-color: var(--color-blanco); 
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .intro-cursos-imagenes {
-  flex: 1; /* Ocupa mitad del espacio */
-  min-width: 280px; /* Ancho mínimo */
+  flex: 1; 
+  min-width: 280px;
   display: flex;
-  flex-direction: column; /* Apila imágenes verticalmente */
-  gap: 10px; /* Espacio entre imágenes */
+  flex-direction: column;
+  gap: 10px; 
 }
 
 .intro-cursos-imagenes img {
@@ -630,9 +630,9 @@ nav ul li a:hover {
 }
 
 .intro-cursos-texto {
-  flex: 1.2; /* Ocupa un poco más de espacio que las imágenes */
+  flex: 1.2; 
   min-width: 300px;
-  padding-left: 20px; /* Espacio a la izquierda del texto */
+  padding-left: 20px; 
   text-align: left;
 }
 
