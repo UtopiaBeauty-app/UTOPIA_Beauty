@@ -1031,13 +1031,13 @@ nav ul li a:hover {
         transform: scale(1);
     }
 }
-/* --- 0. Fondo Animado "Increíble" para el Body --- */
+
 body {
-  /* Usamos tus colores principales, ajusta si prefieres otros */
+
   background: linear-gradient(135deg, var(--color-fondo-crema) 0%, var(--color-primario-cafe-claro) 50%, var(--color-fondo-rosita) 100%);
-  background-size: 400% 400%; /* Tamaño para que el degradado se mueva */
-  animation: gradientAnimation 15s ease infinite; /* Animación de 15s */
-  min-height: 100vh; /* Asegura que el degradado ocupe toda la altura */
+  background-size: 400% 400%; 
+  animation: gradientAnimation 15s ease infinite; 
+  min-height: 100vh; 
 }
 
 @keyframes gradientAnimation {
@@ -1046,40 +1046,39 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* --- 1. Ajustes para el Main (que el contenido "flote") --- */
+
 main {
-  background-color: rgba(255, 255, 255, 0.9); /* Un blanco semitransparente para el contenido */
-  max-width: 900px; /* Ancho máximo para tu contenido */
-  margin: 30px auto; /* Centra el contenido y le da espacio arriba/abajo */
+  background-color: rgba(255, 255, 255, 0.9); 
+  max-width: 900px; 
+  margin: 30px auto; 
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), /* Sombra principal más pronunciada */
-              0 0 0 8px rgba(166, 120, 86, 0.1); /* Borde sutil de color café */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
+              0 0 0 8px rgba(166, 120, 86, 0.1); 
   position: relative;
-  /* Efecto 3D sutil para el main */
   transform-style: preserve-3d;
   perspective: 1500px;
   transition: transform 0.5s ease-out;
 }
 
-/* Opcional: Levantar el main ligeramente al hacer hover sobre él (en caso de que sea interactivo) */
+
 main:hover {
   transform: translateY(-5px) translateZ(10px);
 }
 
 
-/* --- 2. Estilos Swiper para Efecto 3D --- */
+
 .swiper {
   width: 100%;
-  height: 400px; /* Ajusta la altura según tus imágenes */
+  height: 400px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para el carrusel */
-  transform: translateZ(30px); /* Empuja el Swiper hacia el frente en 3D */
-  transition: transform 0.5s ease-out; /* Transición para posible hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  transform: translateZ(30px); 
+  transition: transform 0.5s ease-out; 
 }
 
-/* Opcional: efecto al pasar el ratón sobre el Swiper */
+
 .swiper:hover {
   transform: translateZ(50px) translateY(-5px) rotateX(1deg) rotateY(-1deg);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
@@ -1089,19 +1088,19 @@ main:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-fondo-crema); /* Fondo si la imagen no ocupa todo */
+  background-color: var(--color-fondo-crema); 
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen sin deformar */
+  object-fit: cover; 
 }
 
-/* --- 3. Mejoras visuales para Controles Swiper --- */
+
 .swiper-pagination-bullet {
-  background-color: rgba(166, 120, 86, 0.7); /* Color café para los puntos de paginación */
+  background-color: rgba(166, 120, 86, 0.7); 
   width: 10px;
   height: 10px;
   opacity: 0.8;
@@ -1118,7 +1117,7 @@ main:hover {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--color-primario-cafe-oscuro); /* Flechas de navegación */
+  color: var(--color-primario-cafe-oscuro); 
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   width: 40px;
@@ -1131,7 +1130,7 @@ main:hover {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 18px; /* Tamaño del icono de la flecha */
+  font-size: 18px; 
 }
 
 .swiper-button-next:hover,
@@ -1141,15 +1140,15 @@ main:hover {
   transform: scale(1.1);
 }
 
-/* --- 4. Mejoras para la descripción de acerca --- */
+
 .descripcion-acerca {
   padding: 30px;
   text-align: center;
-  background-color: var(--color-blanco); /* Fondo para el texto */
+  background-color: var(--color-blanco); 
   border-radius: 12px;
-  margin-top: 30px; /* Espacio entre Swiper y texto */
+  margin-top: 30px; 
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transform: translateZ(20px); /* Ligeramente hacia el frente */
+  transform: translateZ(20px); 
   transition: transform 0.5s ease-out;
 }
 
@@ -1159,7 +1158,7 @@ main:hover {
   font-size: 2.2em;
   margin-bottom: 15px;
   letter-spacing: 1px;
-  transform: translateZ(10px); /* Pop para el título */
+  transform: translateZ(10px); 
 }
 
 .descripcion-acerca p {
@@ -1171,10 +1170,10 @@ main:hover {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  transform: translateZ(5px); /* Pop para el párrafo */
+  transform: translateZ(5px); 
 }
 
-/* --- Ajustes responsivos --- */
+
 @media (max-width: 768px) {
   main {
       margin: 20px auto;
@@ -1183,7 +1182,7 @@ main:hover {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   .swiper {
-      height: 300px; /* Menor altura en móvil */
+      height: 300px; 
       border-radius: 10px;
   }
   .descripcion-acerca h2 {
@@ -1209,60 +1208,58 @@ main:hover {
       padding: 15px;
   }
   .swiper {
-      height: 250px; /* Aún menor altura en móviles pequeños */
+      height: 250px; 
   }
 }
 
-/* --- AJUSTES EN MAIN (SI NO LOS TIENES YA) --- */
+
 main {
-  /* ... (tus estilos actuales: max-width, margin, padding, etc.) ... */
   position: relative;
   transform-style: preserve-3d;
   perspective: 1500px;
 }
 
-/* --- ESTILOS MEJORADOS PÁGINA DE CONTACTO --- */
+
 .contacto-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px; /* Más espacio */
+  gap: 40px; 
   text-align: left;
-  align-items: center; /* Centra verticalmente las columnas */
-  transform: translateZ(20px); /* Ligeramente hacia el frente */
+  align-items: center; 
+  transform: translateZ(20px); 
 }
 
 .contacto-info {
-  flex: 1.5; /* Un poco más de espacio para el texto */
+  flex: 1.5; 
   min-width: 300px;
-  transform: translateZ(10px); /* Pop sutil */
+  transform: translateZ(10px); 
 }
 
 .contacto-visual {
   flex: 1;
   min-width: 280px;
-  transform-style: preserve-3d; /* Para efecto 3D en imagen */
+  transform-style: preserve-3d;
   perspective: 1000px;
 }
 
 .contacto-visual img {
   width: 100%;
-  /* height: 450px; */ /* Quita altura fija para que sea responsiva */
-  aspect-ratio: 3 / 4; /* Proporción más vertical */
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s cubic-bezier(.69,.06,.15,.88), box-shadow 0.4s ease; /* Transición suave */
+  transition: transform 0.4s cubic-bezier(.69,.06,.15,.88), box-shadow 0.4s ease; 
 }
 
-/* Efecto Hover 3D en Imagen */
+
 .contacto-visual img:hover {
-  transform: rotateY(-5deg) rotateX(3deg) scale(1.03) translateZ(20px); /* Inclinación 3D */
-  box-shadow: 0 15px 35px rgba(74, 57, 49, 0.3); /* Sombra café más pronunciada */
+  transform: rotateY(-5deg) rotateX(3deg) scale(1.03) translateZ(20px); 
+  box-shadow: 0 15px 35px rgba(74, 57, 49, 0.3); 
 }
 
-/* Títulos y Texto */
+
 .contacto-info h2 {
-  font-size: 2.4em; /* Ligeramente más grande */
+  font-size: 2.4em; 
   border-bottom: 2px solid var(--color-primario-cafe);
   padding-bottom: 8px;
   margin-bottom: 25px;
@@ -1272,14 +1269,14 @@ main {
   font-size: 1.1em;
   line-height: 1.7;
   color: var(--color-texto-cafe-oscuro);
-  margin-bottom: 30px; /* Más espacio antes de redes */
+  margin-bottom: 30px; 
 }
 
-/* Redes Sociales con Efecto Hover 3D */
+
 .redes-sociales { list-style: none; padding: 0; margin-top: 20px; }
-.redes-sociales li { margin-bottom: 25px; } /* Más espacio */
+.redes-sociales li { margin-bottom: 25px; }
 .redes-sociales li a {
-  display: inline-flex; /* Permite transformaciones y mantiene flujo */
+  display: inline-flex; 
   align-items: center;
   text-decoration: none;
   font-size: 1.1em;
@@ -1292,7 +1289,7 @@ main {
 
 .redes-sociales li a:hover {
   color: var(--color-primario-cafe);
-  transform: translateY(-4px) translateZ(15px) scale(1.05); /* Levanta y acerca */
+  transform: translateY(-4px) translateZ(15px) scale(1.05); 
 }
 
 .redes-sociales i {
@@ -1302,54 +1299,54 @@ main {
   width: 35px;
   text-align: center;
   transition: color 0.3s ease;
-  transform: translateZ(10px); /* Ligeramente al frente */
+  transform: translateZ(10px);
 }
 .redes-sociales li a:hover i {
-  color: var(--color-texto-cafe-oscuro); /* Cambio de color icono al hacer hover */
+  color: var(--color-texto-cafe-oscuro); 
 }
-.redes-sociales span { /* Estilo para el texto junto al icono */
+.redes-sociales span { 
   transform: translateZ(5px);
 }
 
 
-/* --- Ajustes Responsivos para Contacto --- */
+
 @media (max-width: 768px) {
-  /* (Se mantienen los ajustes generales de fuentes, main, etc.) */
-  .contacto-container {
-      flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+  
+    .contacto-container {
+      flex-direction: column-reverse; 
       gap: 30px;
-      align-items: center; /* Centrar items */
+      align-items: center; 
   }
   .contacto-info {
-      flex: 1; /* Resetear flex */
-      text-align: center; /* Centrar texto */
-      padding: 0 15px; /* Padding lateral */
+      flex: 1; 
+      text-align: center;
+      padding: 0 15px; 
   }
   .contacto-info h2 {
       text-align: center;
-      border-bottom: none; /* Quitar borde en móvil */
-      border-top: 2px solid var(--color-primario-cafe); /* Poner borde arriba */
+      border-bottom: none; 
+      border-top: 2px solid var(--color-primario-cafe); 
       padding-top: 15px;
       padding-bottom: 0;
   }
   .redes-sociales {
-      display: flex; /* Poner redes en fila */
+      display: flex; 
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px 30px; /* Espacio vertical y horizontal */
+      gap: 20px 30px; 
   }
-  .redes-sociales li { margin-bottom: 0; } /* Resetear margen */
+  .redes-sociales li { margin-bottom: 0; } 
 
   .contacto-visual {
-      flex: 1; /* Resetear flex */
-      width: 90%; /* Ancho imagen */
+      flex: 1; 
+      width: 90%; 
       max-width: 400px;
   }
-   .contacto-visual img:hover { /* Desactivar hover complejo en móvil */
+   .contacto-visual img:hover { 
        transform: none;
        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
    }
-   .redes-sociales li a:hover { /* Desactivar hover complejo en móvil */
+   .redes-sociales li a:hover { 
        transform: none;
    }
 }
