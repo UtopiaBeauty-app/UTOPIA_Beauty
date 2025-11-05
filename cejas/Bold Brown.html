@@ -47,7 +47,7 @@
                     <p class="focus-zoom-caption">Simetría y diseño personalizado</p>
                 </div>
 
-                </div> <a href="../index.html" class="boton-animado" style="margin-top: 40px;">Volver a Inicio</a>
+              
                 
     <footer>
         <p>Utopía</p>
@@ -56,6 +56,24 @@
     <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        
+        // Animaciones para esta página
+        sr.reveal('.servicio-detalle h1', { origin: 'top' });
+        sr.reveal('.servicio-detalle h2', { origin: 'left', delay: 100 });
+        sr.reveal('.servicio-detalle p', { origin: 'right', delay: 200 });
+        sr.reveal('.focus-zoom-item', { interval: 150, delay: 300, scale: 0.9 });
+        sr.reveal('.boton-animado', { origin: 'bottom', delay: 200 });
+    </script>
 
 </body>
 </html>
