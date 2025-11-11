@@ -1441,3 +1441,119 @@ main {
     height: 300px;
   }
 }
+/* --- 14. ESTILOS HEADER (NAVBAR) --- */
+
+/* Estilos de Escritorio (Base) */
+header {
+  background-color: var(--color-fondo-gris);
+  color: var(--color-texto-cafe-oscuro);
+  padding: 20px;
+  text-align: center;
+  display: flex; /* Usamos flex para alinear */
+  justify-content: space-between; /* Logo a la izq., Nav a la der. */
+  align-items: center; /* Centrados verticalmente */
+  position: relative; /* Para el menú desplegable */
+}
+
+/* Ajusta el enlace del logo para que no ocupe todo el ancho */
+.logo-link {
+    line-height: 0; /* Evita espacio extra */
+}
+
+.logo {
+  max-width: 120px;
+  height: auto;
+  margin: 0; /* Quitamos margen inferior y centrado automático */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Menú horizontal en escritorio */
+  justify-content: center;
+  margin: 0;
+}
+
+/* Ocultamos los elementos de móvil por defecto */
+#nav-toggle,
+.nav-toggle-label {
+    display: none;
+}
+
+
+/* --- 15. AJUSTES RESPONSIVOS (MÓVIL) --- */
+
+/* Aquí empieza la magia para celulares (ej. 768px o menos) */
+@media (max-width: 768px) {
+  
+  header {
+    padding: 15px 20px; /* Padding más ajustado para la barra */
+    /* justify-content: space-between; (Heredado) */
+    /* align-items: center; (Heredado) */
+  }
+
+  .logo {
+    max-width: 100px; /* Logo más pequeño en móvil */
+  }
+
+  /* --- Menú Desplegable (Oculto por defecto) --- */
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Apilar enlaces verticalmente */
+    position: fixed;      /* Se superpone a la página */
+    top: 0;
+    right: 0;             /* Aparece desde la derecha */
+    width: 70%;           /* Ancho del menú */
+    max-width: 300px;     /* Ancho máximo */
+    height: 100vh;        /* Altura completa de la pantalla */
+    background-color: var(--color-fondo-gris); /* Tu color de fondo */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding-top: 80px;    /* Espacio arriba para el botón de cerrar */
+    
+    /* Oculto fuera de la pantalla */
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+    z-index: 1001; /* Encima del contenido, debajo del icono */
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+  
+  nav ul li a {
+    padding: 18px 25px; /* Padding grande para tocar fácil */
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid var(--color-fondo-crema); /* Divisor sutil */
+  }
+  nav ul li a:hover {
+    background-color: var(--color-primario-cafe); /* Resaltado al tocar */
+    color: var(--color-blanco);
+    border-bottom-color: var(--color-primario-cafe);
+  }
+
+  /* --- Icono de Hamburguesa (Label) --- */
+  .nav-toggle-label {
+    display: block; /* Se muestra en móvil */
+    font-size: 1.8em;
+    color: var(--color-texto-cafe-oscuro);
+    cursor: pointer;
+    z-index: 1002; /* Siempre encima del menú */
+  }
+
+  /* --- Checkbox (Sigue invisible) --- */
+  #nav-toggle {
+    display: none;
+  }
+  
+  /* --- ESTE ES EL TRUCO (CSS Checkbox Hack) --- */
+  /* Cuando el checkbox está activado (clic en el icono)... */
+  #nav-toggle:checked ~ nav ul {
+    transform: translateX(0); /* ...mueve el menú a la vista */
+  }
+
+  /* Opcional: Cambia el icono de hamburguesa (☰) a una "X" (✕) */
+  #nav-toggle:checked ~ .nav-toggle-label i::before {
+    content: '\f00d'; /* Código de Font Awesome para el icono "times" (X) */
+  }
+}
