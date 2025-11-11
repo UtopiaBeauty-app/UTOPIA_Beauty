@@ -1479,12 +1479,16 @@ nav ul {
     display: none;
 }
 
+
+
 @media (max-width: 768px) {
   
   header {
-    padding: 10px 15px 10px 20px;
- 
+
+    padding: 10px 15px 10px 20px; 
   }
+ 
+}
 
   .logo {
     max-width: 80px; 
