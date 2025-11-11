@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquillaje Semipermanente - Utopia</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../imags/LOGO UTOPIA Marisol Santos.png" alt="Logo de Utopia" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../acerca-de.html">Acerca de</a></li>
+                <li><a href="../Cursos.html">Cursos</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="servicio-categoria" id="cejas">
+            <h2>Modelados de tu Cuerpo y Reduccion de Talla</h2>
+            <p>Expertos en el diseño y embellecimiento de tu Cuerpo.</p>
+            
+            <div class="galeria-horizontal">
+                
+                <a href="Control grasa.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://www.dermaglos.com/Portals/0/Images/Articles/piel_grasa_4_pasos.jpg" alt="Microblading">
+                        <p class="descripcion-imagen">Control de Grasa</p>
+                    </div>
+                </a>
+                
+                <a href="Efecto lifting.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://www.ilahy.es/wp-content/uploads/2016/09/lifting-facial2.jpg" alt="Microshading">
+                        <p class="descripcion-imagen">Efecto Lifting</p>
+                    </div>
+                </a>
+
+                <a href="Extra hidratante.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/limpieza-facial-1623321737.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*" alt="Bold Brown">
+                        <p class="descripcion-imagen">Extra Hidratante</p>
+                    </div>
+                </a>
+                
+                <a href="Limpieza anti polución.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://easensbelleza.com/wp-content/uploads/2025/05/Gemini_Generated_Image_619z9k619z9k619z11.jpg" alt="Ombre">
+                        <p class="descripcion-imagen">Limpieza Antipolucion</p>
+                    </div>
+                </a>
+                
+                <a href="Limpieza profunda..html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://camaleoncosmetics.com/blog/wp-content/uploads/2023/07/POST-limpieza-facial-en-casa-portada.jpg" alt="Correcciones">
+                        <p class="descripcion-imagen">Limpieza Profunda</p>
+                    </div>
+                </a>
+
+                <a href="Rejuvenecimiento.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://staticnew-prod.topdoctors.mx/files/Image/large/c36b6f8521eb789b766b1b669e01c64f.jpg" alt="Correcciones">
+                        <p class="descripcion-imagen">Rejuvenecimiento</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>        
+    
+    </main>
+    
+    <footer>
+        <p>Utopía</p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+       
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        sr.reveal('.servicio-categoria h2', { origin: 'left' });
+        sr.reveal('.servicio-categoria p', { origin: 'right', delay: 100 });
+        sr.reveal('.imagen-item', { interval: 100, scale: 0.9 });
+    </script>
+</body>
+</html>

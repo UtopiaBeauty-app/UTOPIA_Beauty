@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masajes Reductivo Con Vendas calientes</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body> 
+    <header>
+        <h1></h1>
+        <img src="../imags/LOGO UTOPIA Marisol Santos.png" alt="Logo de Utopia" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../acerca-de.html">Acerca de</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="servicio-detalle">
+            <h1>Masaje Reductivo con Vendas calientes</h1>
+
+            <h2>Descripción del Servicio</h2>
+            <p>
+                El masaje reductivo con vendas calientes combina la terapia de calor de las vendas impregnadas en sales o extractos naturales para preparar los tejidos, 
+                mejorar la circulación y relajar los músculos, 
+                con el masaje manual diseñado para ayudar a moldear el cuerpo y tonificar la piel
+            </p>
+
+            
+            <h2>Resultados Destacados</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Observa la calidad en cada detalle:</p>
+
+            <div class="focus-zoom-gallery">
+
+                <div class="focus-zoom-item">
+                     <img src="https://saludmasbelleza.mx/images/mas-vendas.jpg" alt="Resultado Microblading Detalle">
+                  
+                </div>
+
+                <div class="focus-zoom-item">
+                    <img src="https://www.esteticasheyla.es/wp-content/uploads/2020/05/vendascalientes.png" alt="Resultado Microblading Simetría">
+                
+                </div>
+                <a href="index.html">
+                    <div class="boton-animado">
+                    Volver 
+                </div>
+                </a>
+            </main>
+                
+    <footer>
+        <p>Utopía</p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        
+        // Animaciones para esta página
+        sr.reveal('.servicio-detalle h1', { origin: 'top' });
+        sr.reveal('.servicio-detalle h2', { origin: 'left', delay: 100 });
+        sr.reveal('.servicio-detalle p', { origin: 'right', delay: 200 });
+        sr.reveal('.focus-zoom-item', { interval: 150, delay: 300, scale: 0.9 });
+        sr.reveal('.boton-animado', { origin: 'bottom', delay: 200 });
+    </script>
+
+</body>
+</html>

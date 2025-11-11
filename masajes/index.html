@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquillaje Semipermanente - Utopia</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../imags/LOGO UTOPIA Marisol Santos.png" alt="Logo de Utopia" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../acerca-de.html">Acerca de</a></li>
+                <li><a href="../Cursos.html">Cursos</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="servicio-categoria" id="cejas">
+            <h2>Modelados de tu Cuerpo y Reduccion de Talla</h2>
+            <p>Expertos en el diseño y embellecimiento de tu Cuerpo.</p>
+            
+            <div class="galeria-horizontal">
+                
+                <a href="Ayurveda - Relajante.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://moonrelaxspa.com/wp-content/uploads/2022/10/2a2cff295143fc4a94e27348bbcbf153.jpeg" alt="Microblading">
+                        <p class="descripcion-imagen">Ayurveda</p>
+                    </div>
+                </a>
+                
+                <a href="Manos y piel de seda..html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://www.65ymas.com/uploads/s1/67/27/78/bigstock-beautiful-young-woman-applying-413255689.jpeg" alt="Microshading">
+                        <p class="descripcion-imagen">Manos y piel de Seda</p>
+                    </div>
+                </a>
+
+                <a href="Piernas cansadas..html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://cdn-lbhbl.nitrocdn.com/GmaIXEnWgiFPRppPGSFZUendVFblOcjm/assets/images/optimized/rev-ea9da3d/dramariaalejandradiaz.com/wp-content/uploads/2024/01/Que-Son-las-Piernas-Pesadas-y-Cansadas.jpg" alt="Bold Brown">
+                        <p class="descripcion-imagen">Piernas Cansadas</p>
+                    </div>
+                </a>
+
+                <a href="Shiatsu Japonés.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://resizer.glanacion.com/resizer/v2/el-shiatsu-mejora-el-metabolismo-y-alivia-las-BKEX6HTQDZCPVJ5FOOSG5PSAEU.JPG?auth=6628fa08eb589f2eeda651a51ebc9436040bc69211f99bd9d0adc05bde76b163&width=1280&height=854&quality=70&smart=true" alt="Bold Brown">
+                        <p class="descripcion-imagen">Shiatsu Japonés</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>        
+    
+    </main>
+    
+    <footer>
+        <p>Utopía</p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+       
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        sr.reveal('.servicio-categoria h2', { origin: 'left' });
+        sr.reveal('.servicio-categoria p', { origin: 'right', delay: 100 });
+        sr.reveal('.imagen-item', { interval: 100, scale: 0.9 });
+    </script>
+</body>
+</html>

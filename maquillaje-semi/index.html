@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquillaje Semipermanente - Utopia</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../imags/LOGO UTOPIA Marisol Santos.png" alt="Logo de Utopia" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../acerca-de.html">Acerca de</a></li>
+                <li><a href="../Cursos.html">Cursos</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="servicio-categoria" id="cejas">
+            <h2>Cejas</h2>
+            <p>Expertos en el diseño y embellecimiento de tu mirada.</p>
+            
+            <div class="galeria-horizontal">
+                
+                <a href="microblading.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://www.browlab.fr/cdn/shop/articles/Untitled-design-2022-04-07T104454.754_032efc71-6feb-4650-a375-f741d671c2ff.png?v=1743448484&width=2048" alt="Microblading">
+                        <p class="descripcion-imagen">Microblading</p>
+                    </div>
+                </a>
+                
+                <a href="MICROSHADING.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://byclauconsulting.com/wp-content/uploads/2023/07/Microshading_Tampa_By-Clau-Consulting.png" alt="Microshading">
+                        <p class="descripcion-imagen">Microshading</p>
+                    </div>
+                </a>
+
+                <a href="Bold Brown.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://images.prismic.io/phi-academycom/fd3525b3-9c39-4fab-af7a-d8f69ccdfd69_bold-brows-treatment.jpg?auto=compress,format" alt="Bold Brown">
+                        <p class="descripcion-imagen">Bold Brown</p>
+                    </div>
+                </a>
+                
+                <a href="ombre.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://i.pinimg.com/736x/47/ec/d9/47ecd97410ccc68bb7fd3858eaf784b6.jpg" alt="Ombre">
+                        <p class="descripcion-imagen">Ombre</p>
+                    </div>
+                </a>
+                
+                <a href="correcciones.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://www.beautymajayura.com/wp-content/uploads/2024/01/Servicio-diseno-avanzado-web.jpg" alt="Correcciones">
+                        <p class="descripcion-imagen">Correcciones</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="servicio-categoria" id="labios">
+            <h2>Labios</h2>
+            <p>Color y definición para una sonrisa perfecta.</p>
+            
+            <div class="galeria-horizontal">
+
+                <a href="Delineado.html" class="enlace-item">
+                    <div class="imagen-item">
+                        <img src="https://www.maybelline.com.mx/consejos-de-maquillaje/tutoriales-de-maquillaje-de-labios/-/media/Project/Loreal/Brand%20Sites/MNY/Americas/LATAM/Articles/delineado-de-labios/Mujer%20aplicndose%20Lifter%20Liner" alt="Delineado de Labios">
+                        <p class="descripcion-imagen">Delineado Labial</p>
+                    </div>
+                </a>
+
+                <a href="relleno de labios.html" class="enlace-item">
+                    <div class="imagen-item">
+                       <img src="https://byclauconsulting.com/wp-content/uploads/2023/07/Micropigmentacion-de-Labios-Relleno-de-Color-16-scaled-1-scaled.jpg" alt="Relleno de Labios">
+                       <p class="descripcion-imagen">Relleno de Labios</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="servicio-categoria" id="ojos">
+            <h2>Ojos</h2>
+            <p>Realza e intensifica tu mirada.</p>
+            
+            <div class="galeria-horizontal">
+
+                <a href="deliniadoOjos.html" class="enlace-item">
+                    <div class="imagen-item">
+                       <img src="https://cdn.shopify.com/s/files/1/0244/8136/6080/files/Picture2_62192960-a17a-4264-adbb-c0d0bfc53be1_large.png?v=1566255300" alt="Delineado de Ojos">
+                       <p class="descripcion-imagen">Delineado de Ojos</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    
+    </main>
+    
+    <footer>
+        <p>Utopía</p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+       
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        sr.reveal('.servicio-categoria h2', { origin: 'left' });
+        sr.reveal('.servicio-categoria p', { origin: 'right', delay: 100 });
+        sr.reveal('.imagen-item', { interval: 100, scale: 0.9 });
+    </script>
+</body>
+</html>

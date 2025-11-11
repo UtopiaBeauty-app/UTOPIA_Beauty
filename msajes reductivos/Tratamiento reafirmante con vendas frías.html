@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamiento Reafirmante con vendas Frias</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body> 
+    <header>
+        <h1></h1>
+        <img src="../imags/LOGO UTOPIA Marisol Santos.png" alt="Logo de Utopia" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../acerca-de.html">Acerca de</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="servicio-detalle">
+            <h1>Tratamiento Reafirmante con vendas Frias</h1>
+
+            <h2>Descripción del Servicio</h2>
+            <p>
+                Las vendas frías reafirmantes son un tratamiento estético que utiliza vendas impregnadas en 
+                soluciones con ingredientes como mentol, algas marinas y sales minerales para tonificar y reafirmar la piel. Este método ayuda a reducir la celulitis, 
+                la flacidez y la retención de líquidos, especialmente después de tratamientos reductivos,
+                 promoviendo la circulación y desinflamando los tejidos. 
+            </p>
+
+            
+            <h2>Resultados Destacados</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Observa la calidad en cada detalle:</p>
+
+            <div class="focus-zoom-gallery">
+
+                <div class="focus-zoom-item">
+                     <img src="https://www.druni.es/blog/wp-content/uploads/2023/04/Vendas-frias-img01-060523.jpg" alt="Resultado Microblading Detalle">
+                  
+                </div>
+
+                <div class="focus-zoom-item">
+                    <img src="https://balneariodepuenteviesgo.com/wp-content/uploads/2017/07/vendas-frias.png" alt="Resultado Microblading Simetría">
+                
+                </div>
+                <a href="index.html">
+                    <div class="boton-animado">
+                    Volver 
+                </div>
+                </a>
+            </main>
+                
+    <footer>
+        <p>Utopía</p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        
+        // Animaciones para esta página
+        sr.reveal('.servicio-detalle h1', { origin: 'top' });
+        sr.reveal('.servicio-detalle h2', { origin: 'left', delay: 100 });
+        sr.reveal('.servicio-detalle p', { origin: 'right', delay: 200 });
+        sr.reveal('.focus-zoom-item', { interval: 150, delay: 300, scale: 0.9 });
+        sr.reveal('.boton-animado', { origin: 'bottom', delay: 200 });
+    </script>
+
+
+</body>
+</html>

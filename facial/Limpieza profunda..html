@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpieza Profunda</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body> 
+    <header>
+        <h1></h1>
+        <img src="../imags/LOGO UTOPIA Marisol Santos.png" alt="Logo de Utopia" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../acerca-de.html">Acerca de</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="servicio-detalle">
+            <h1>Limpiza Profunda</h1>
+
+            <h2>Descripción del Servicio</h2>
+            <p>
+                Significa que el producto no solo limpia la superficie, sino que es capaz de penetrar en 
+                los poros para eliminar eficazmente la suciedad acumulada, el exceso de sebo (grasa), 
+                las células muertas y los restos de maquillaje.
+                 Es clave para prevenir puntos negros y granitos.
+            </p>    
+
+            
+            <h2>Descripción del Servicio</h2>
+            <p>
+                Va más allá de una hidratación básica. Este producto aporta una dosis intensiva de agua y 
+                lípidos a la piel, ideal para combatir la resequedad, la tirantez y la descamación. 
+                Ayuda a restaurar la barrera de humedad natural de la piel, dejándola suave y elástica.
+            </p>    
+
+            
+            <h2>Resultados Destacados</h2>
+            <p style="text-align: center; margin-bottom: 25px;">Observa la calidad en cada detalle:</p>
+
+            <div class="focus-zoom-gallery">
+
+                <div class="focus-zoom-item">
+                     <img src="https://www.horajaen.com/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-07-at-14.04.37.jpeg" alt="Resultado PDRN 1">
+                
+                </div>
+
+                <div class="focus-zoom-item">
+                     <img src="https://browsandlips.ae/wp-content/uploads/2023/10/deep-cleansing-facial-before-after.webp" alt="Aplicación PDRN Salmón">
+           
+                </div>
+
+        
+
+                <a href="index.html">
+                    <div class="boton-animado">
+                    Volver 
+                </div>
+                </a>
+    
+    </main>
+    
+    <footer>
+        <p>Utopía </p>
+    </footer>
+
+    <a href="https://wa.me/524775225666" class="whatsapp-flotante" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 900,
+            easing: 'cubic-bezier(.69,.06,.15,.88)',
+            reset: false
+        });
+        
+        // Animaciones para esta página
+        sr.reveal('.servicio-detalle h1', { origin: 'top' });
+        sr.reveal('.servicio-detalle h2', { origin: 'left', delay: 100 });
+        sr.reveal('.servicio-detalle p', { origin: 'right', delay: 200 });
+        sr.reveal('.focus-zoom-item', { interval: 150, delay: 300, scale: 0.9 });
+        sr.reveal('.boton-animado', { origin: 'bottom', delay: 200 });
+    </script>
+
+
+</body>
+</html>
