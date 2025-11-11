@@ -1455,7 +1455,6 @@ header {
   position: relative; /* Para el menú desplegable */
 }
 
-/* Ajusta el enlace del logo para que no ocupe todo el ancho */
 .logo-link {
     line-height: 0; /* Evita espacio extra */
 }
@@ -1483,7 +1482,7 @@ nav ul {
 @media (max-width: 768px) {
   
   header {
-    padding: 10px 20px; 
+    padding: 10px 15px 10px 20px;
  
   }
 
