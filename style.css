@@ -1551,4 +1551,3 @@ nav ul {
   #nav-toggle:checked ~ .nav-toggle-label i::before {
     content: '\f00d';
   }
-}
